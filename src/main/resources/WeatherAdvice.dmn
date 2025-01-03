@@ -8,6 +8,9 @@
     </dmn:allowedValues>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_7040F633-0BE5-44B5-90A9-3CD5B4124253" name="weather" isCollection="false">
+    <dmn:itemComponent id="_1428CFF1-389B-4995-94A8-BCA0CA235D9F" name="location" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
     <dmn:itemComponent id="_51066D27-7B1B-45FA-973C-8017D37B1D10" name="rainForecast" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
@@ -47,17 +50,17 @@
     </dmn:informationRequirement>
     <dmn:decisionTable id="_37D35401-A796-414F-8035-A88A5E288392" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_8F781C6D-39D3-4D24-A8FB-1892FCC4114F">
-        <dmn:inputExpression id="_697F23BD-59D6-434C-B653-886C4425068F" typeRef="number">
+        <dmn:inputExpression id="_C3A6A22F-AC57-43FA-B38F-9EB44E0A257B" typeRef="number">
           <dmn:text>Weather.rainForecast</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_F5BB6BE1-6905-4FE6-BC3E-4BFA8EA03B75">
-        <dmn:inputExpression id="_3B05686A-B3D8-4615-8681-451BB94EFB88" typeRef="string">
+        <dmn:inputExpression id="_8C294484-CFF7-4579-B1E0-B6FA98F04058" typeRef="string">
           <dmn:text>Weather.temperature</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_7A180C2B-7A47-4763-BCFD-ACF303DDBE05">
-        <dmn:inputExpression id="_8605EAD1-110A-4BCB-8292-D9D984729C01" typeRef="boolean">
+        <dmn:inputExpression id="_4324048A-8A3C-4102-9A92-BF4AE73C6F84" typeRef="boolean">
           <dmn:text>Weather.stormAlert</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
@@ -102,7 +105,7 @@
           <dmn:text>[20..80)</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_CB68EC0E-C7F8-40FD-A9E0-8B445D7731C9">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"warm"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_382972D7-78F0-4E0D-AE53-6EFEF1BF7B19">
           <dmn:text>-</dmn:text>
@@ -186,7 +189,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="233" y="190" width="100" height="50"/>
+        <dc:Bounds x="228" y="190" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_1FCCF431-5822-4300-877E-6255983DD427" dmnElementRef="_1FCCF431-5822-4300-877E-6255983DD427" isCollapsed="false">
@@ -199,7 +202,7 @@
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_2D1EDBC6-CAEE-44E7-AADD-B5C6B5ED98A1" dmnElementRef="_2D1EDBC6-CAEE-44E7-AADD-B5C6B5ED98A1">
-        <di:waypoint x="333" y="215"/>
+        <di:waypoint x="328" y="215"/>
         <di:waypoint x="448" y="120"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_2A2E86CF-D746-4304-BB1A-11FDFF375BAD" dmnElementRef="_2A2E86CF-D746-4304-BB1A-11FDFF375BAD">
@@ -208,7 +211,7 @@
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_A50E0157-B80E-4B3E-86C4-3AF61234F563-AUTO-SOURCE" dmnElementRef="_A50E0157-B80E-4B3E-86C4-3AF61234F563">
         <di:waypoint x="282" y="370"/>
-        <di:waypoint x="283" y="240"/>
+        <di:waypoint x="278" y="240"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
