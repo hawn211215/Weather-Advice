@@ -38,9 +38,6 @@
     <dmn:informationRequirement id="_2A2E86CF-D746-4304-BB1A-11FDFF375BAD">
       <dmn:requiredInput href="#_8454E2FC-7037-4E01-8409-7D3648AC4938"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement id="_DF62A278-10B8-4870-9915-A1D6DC9A3E76">
-      <dmn:requiredInput href="#_B762626A-4139-4418-8826-433586ABDE57"/>
-    </dmn:informationRequirement>
     <dmn:literalExpression id="_14CF4FC8-353E-442B-863F-51457B41E10E">
       <dmn:text>if string length(Name) = 0 or string length(Weather.location) = 0 then "Sorry, we don't have enough information to provide a response." else "Hello " + Name + "! " +WeatherAdvice+ "Location fetch is update 04:46 "+Weather.location</dmn:text>
     </dmn:literalExpression>
@@ -210,10 +207,6 @@
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_2A2E86CF-D746-4304-BB1A-11FDFF375BAD" dmnElementRef="_2A2E86CF-D746-4304-BB1A-11FDFF375BAD">
         <di:waypoint x="447" y="395"/>
-        <di:waypoint x="448" y="120"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_DF62A278-10B8-4870-9915-A1D6DC9A3E76" dmnElementRef="_DF62A278-10B8-4870-9915-A1D6DC9A3E76">
-        <di:waypoint x="282" y="395"/>
         <di:waypoint x="448" y="120"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_A50E0157-B80E-4B3E-86C4-3AF61234F563-AUTO-SOURCE" dmnElementRef="_A50E0157-B80E-4B3E-86C4-3AF61234F563">
