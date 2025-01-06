@@ -38,8 +38,11 @@
     <dmn:informationRequirement id="_2A2E86CF-D746-4304-BB1A-11FDFF375BAD">
       <dmn:requiredInput href="#_8454E2FC-7037-4E01-8409-7D3648AC4938"/>
     </dmn:informationRequirement>
+    <dmn:informationRequirement id="_DF62A278-10B8-4870-9915-A1D6DC9A3E76">
+      <dmn:requiredInput href="#_B762626A-4139-4418-8826-433586ABDE57"/>
+    </dmn:informationRequirement>
     <dmn:literalExpression id="_14CF4FC8-353E-442B-863F-51457B41E10E">
-      <dmn:text>if Name = null then "Sorry, we don't have enough information to provide a response." else "Hello " + Name + "! " +WeatherAdvice</dmn:text>
+      <dmn:text>if string length(Name) = 0 or string length(Weather.location) = 0 then "Sorry, we don't have enough information to provide a response." else "Hello " + Name + "! " +WeatherAdvice+ "Location "+Weather.location</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_60B2F582-B89E-4F7F-81F2-902D2C8B4E79" name="WeatherAdvice">
@@ -50,17 +53,17 @@
     </dmn:informationRequirement>
     <dmn:decisionTable id="_37D35401-A796-414F-8035-A88A5E288392" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_8F781C6D-39D3-4D24-A8FB-1892FCC4114F">
-        <dmn:inputExpression id="_C3A6A22F-AC57-43FA-B38F-9EB44E0A257B" typeRef="number">
+        <dmn:inputExpression id="_26179C4E-5017-4B54-89C5-24CCECF3E3A9" typeRef="number">
           <dmn:text>Weather.rainForecast</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_F5BB6BE1-6905-4FE6-BC3E-4BFA8EA03B75">
-        <dmn:inputExpression id="_8C294484-CFF7-4579-B1E0-B6FA98F04058" typeRef="string">
+        <dmn:inputExpression id="_4E510EB4-8898-4DAE-8FE2-20A4F5A906B4" typeRef="string">
           <dmn:text>Weather.temperature</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_7A180C2B-7A47-4763-BCFD-ACF303DDBE05">
-        <dmn:inputExpression id="_4324048A-8A3C-4102-9A92-BF4AE73C6F84" typeRef="boolean">
+        <dmn:inputExpression id="_30AFCC38-21CC-45B5-B3AB-26764217BF54" typeRef="boolean">
           <dmn:text>Weather.stormAlert</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
@@ -122,7 +125,7 @@
           <dmn:text>[80..100]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_893D5420-AE00-40A4-91AE-A6DD73E19159">
-          <dmn:text>-</dmn:text>
+          <dmn:text>"hot"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_92D7DB2B-7C90-4079-B594-D56DF2784CC5">
           <dmn:text>-</dmn:text>
@@ -207,6 +210,10 @@
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_2A2E86CF-D746-4304-BB1A-11FDFF375BAD" dmnElementRef="_2A2E86CF-D746-4304-BB1A-11FDFF375BAD">
         <di:waypoint x="447" y="395"/>
+        <di:waypoint x="448" y="120"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_DF62A278-10B8-4870-9915-A1D6DC9A3E76" dmnElementRef="_DF62A278-10B8-4870-9915-A1D6DC9A3E76">
+        <di:waypoint x="282" y="395"/>
         <di:waypoint x="448" y="120"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_A50E0157-B80E-4B3E-86C4-3AF61234F563-AUTO-SOURCE" dmnElementRef="_A50E0157-B80E-4B3E-86C4-3AF61234F563">
