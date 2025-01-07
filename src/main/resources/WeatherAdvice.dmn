@@ -39,7 +39,7 @@
       <dmn:requiredInput href="#_8454E2FC-7037-4E01-8409-7D3648AC4938"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_14CF4FC8-353E-442B-863F-51457B41E10E">
-      <dmn:text>if string length(Name) = 0 or string length(Weather.location) = 0 then "Sorry, we don't have enough information to provide a response." else "Hello " + Name + "! " +WeatherAdvice+ "Location fetch is update 11：44 14：09 in Temp Web second times"+Weather.location</dmn:text>
+      <dmn:text>if string length(Name) = 0 or string length(Weather.location) = 0 then "Sorry, we don't have enough information to provide a response." else "Hello " + Name + "! " +WeatherAdvice+ "Location fetch is update 11：44 14：09 in Temp Web second times local show"+Weather.location</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_60B2F582-B89E-4F7F-81F2-902D2C8B4E79" name="WeatherAdvice">
